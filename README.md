@@ -1,10 +1,12 @@
-# Multimodal BraTS Segmentation
+# Brain Tumor Segmentation with TransUNet
 
-Brain tumor segmentation using the BraTS 2020 dataset with deep learning approaches.
+Segmenting brain tumors from MRI scans using deep learning (BraTS 2020 dataset).
 
-## Project Overview
+## 🚀 Quick Start
 
-This project implements multimodal brain tumor segmentation using MRI scans from the BraTS (Brain Tumor Segmentation) 2020 challenge dataset.
+**New here? Read this first:** [SIMPLE_GUIDE.md](SIMPLE_GUIDE.md)
+
+It tells you exactly where to put your work - no confusion!
 
 ## Dataset
 
@@ -13,27 +15,19 @@ This project implements multimodal brain tumor segmentation using MRI scans from
 - **Modalities**: T1, T1ce, T2, FLAIR
 - **Segmentation Labels**: Necrotic/non-enhancing tumor, peritumoral edema, enhancing tumor
 
-## Project Structure
+## 📁 Simple Structure
 
 ```
-.
-├── src/                     # Source code
-│   ├── models/             # U-Net, Attention U-Net (2D & 3D)
-│   ├── data/               # Data loaders and preprocessing
-│   ├── explainability/     # Grad-CAM, attention visualization
-│   └── utils/              # Helper functions
-├── notebooks/              # Jupyter notebooks for exploration
-├── experiments/            # Training configs and logs
-│   ├── configs/           # YAML configuration files
-│   └── logs/              # Training logs and tensorboard
-├── scripts/               # Training and evaluation scripts
-├── results/               # Output results
-│   ├── figures/          # Visualizations and plots
-│   └── tables/           # Performance metrics
-├── dataset/              # BraTS 2020 dataset (not tracked)
-├── requirements.txt      # Python dependencies
-└── README.md
+notebooks/     ← Do your work here (Data, Model, Training)
+docs/          ← Write what you learned (DATA.md, MODELS.md, TRAINING.md)
+src/           ← Clean code goes here (when ready)
+dataset/       ← Put BraTS data here
+results/       ← Save your plots here
 ```
+
+**That's it!** Start in `notebooks/`, document in `docs/`.
+
+Read [SIMPLE_GUIDE.md](SIMPLE_GUIDE.md) for details.
 
 ## Requirements
 
@@ -58,41 +52,32 @@ This is a research project. Feel free to open issues or submit pull requests.
 - **Efficiency Analysis**: Training time, GPU memory, inference speed metrics
 - **Reproducible Pipeline**: Clean code structure with configuration management
 
+## 📖 Documentation
+
+- **[SIMPLE_GUIDE.md](SIMPLE_GUIDE.md)** ← START HERE! Where to put everything
+- **[docs/DATA.md](docs/DATA.md)** - What you learned about the data
+- **[docs/MODELS.md](docs/MODELS.md)** - How your models work
+- **[docs/TRAINING.md](docs/TRAINING.md)** - Training experiments and results
+- **[PROJECT_PLAN.md](PROJECT_PLAN.md)** - Overall project plan
+
 ## Getting Started
 
 ### Installation
 
 ```bash
-# Clone the repository
 git clone https://github.com/sumit43336/multimodal-brats-segmentation.git
 cd multimodal-brats-segmentation
-
-# Install dependencies
 pip install -r requirements.txt
 ```
 
-### Dataset Setup
+### Your Workflow
 
-1. Download BraTS 2020 dataset from [Kaggle](https://www.kaggle.com/datasets/awsaf49/brats20-dataset-training-validation)
-2. Extract to `dataset/` directory
-3. Run preprocessing scripts
+1. **Explore Data** → Open `notebooks/Data.ipynb`
+2. **Build Model** → Open `notebooks/Model.ipynb`
+3. **Train** → Open `notebooks/Training.ipynb`
+4. **Document** → Write in `docs/DATA.md`, `docs/MODELS.md`, `docs/TRAINING.md`
 
-### Training
-
-```bash
-# Train 2D U-Net
-python scripts/train_2d.py --config experiments/configs/unet2d.yaml
-
-# Train 3D U-Net
-python scripts/train_3d.py --config experiments/configs/unet3d.yaml
-```
-
-### Evaluation
-
-```bash
-# Evaluate model
-python scripts/evaluate.py --checkpoint path/to/checkpoint.pth
-```
+That's it!
 
 ## License
 
